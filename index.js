@@ -88,7 +88,6 @@ const get = (link) => new Promise((resolve, reject) => {
  */
 const search = (query) => new Promise((resolve, reject) => {
     const url = `${baseUrl}?s=${encodeURI(query)}`
-    console.log(url)
     axios.get(url)
         .then((res) => {
             const $ = cheerio.load(res.data)
