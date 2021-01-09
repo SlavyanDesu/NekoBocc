@@ -7,7 +7,7 @@ const isLink = (url) => url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.
  * Get latest update.
  * @returns {Object}
  */
-const latest = () => new Promise((resolve, reject) => {
+const latest = () => {
     axios.get(baseUrl)
         .then((res) => {
             const $ = cheerio.load(res.data)
@@ -27,21 +27,21 @@ const latest = () => new Promise((resolve, reject) => {
                 "link": link
             }
             if (json === undefined) {
-                reject('No result.')
+                console.log('No result.')
             } else {
-                resolve(json)
+                return json
             }
         })
-        .catch((err) => reject(err.message))
-})
+        .catch((err) => console.error(err.message))
+}
 
 /**
  * Get result from link.
  * @param {String} link 
  * @returns {Object}
  */
-const get = (link) => new Promise((resolve, reject) => {
-    if (!isLink(link)) return reject('Invalid link! Please provide a valid Nekopoi link.')
+const get = (link) => {
+    if (!isLink(link)) return console.log('Invalid link! Please provide a valid Nekopoi link.')
     axios.get(link)
         .then((res) => {
             const $ = cheerio.load(res.data)
@@ -74,19 +74,19 @@ const get = (link) => new Promise((resolve, reject) => {
                 "synopsis": synopsis
             }
             if (json === undefined) {
-                reject('No result.')
+                console.log('No result.')
             } else {
-                resolve(json)
+                return json
             }
         })
-})
+}
 
 /**
  * 
  * @param {String} query 
  * @returns {Object}
  */
-const search = (query) => new Promise((resolve, reject) => {
+const search = (query) => {
     const url = `${baseUrl}?s=${encodeURI(query)}`
     axios.get(url)
         .then((res) => {
@@ -107,13 +107,13 @@ const search = (query) => new Promise((resolve, reject) => {
                 "link": link
             }
             if (json === undefined) {
-                reject('No result.')
+                console.log('No result.')
             } else {
-                resolve(json)
+                return json
             }
         })
-        .catch((err) => reject(err.message))
-})
+        .catch((err) => console.error(err.message))
+}
 
 module.exports = {
     latest,
