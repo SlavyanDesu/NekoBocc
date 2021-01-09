@@ -7,10 +7,13 @@ const isLink = (url) => url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.
  * Get latest update.
  * @returns {Object}
  */
-const nekopoiLatest = () => new Promise((resolve, reject) => {
+const latest = () => new Promise((resolve, reject) => {
     axios.get(baseUrl)
         .then((res) => {
             const $ = cheerio.load(res.data)
+            const img = []
+            const title = []
+            const link = []
             $('div.eropost').each((i, e) => {
                 $(e).find('h2').each((i, e) => {
                     title.push($(e).find('a').text().trim())
@@ -18,9 +21,6 @@ const nekopoiLatest = () => new Promise((resolve, reject) => {
                 })
                 img.push($(e).find('img').attr('src'))
             })
-            const img = []
-            const title = []
-            const link = []
             const json = {
                 "img": img,
                 "title": title,
@@ -40,11 +40,16 @@ const nekopoiLatest = () => new Promise((resolve, reject) => {
  * @param {String} link 
  * @returns {Object}
  */
-const nekopoiGet = (link) => new Promise((resolve, reject) => {
-    if (!isLink(link)) return reject('Invalid!')
+const get = (link) => new Promise((resolve, reject) => {
+    if (!isLink(link)) return reject('Invalid link! Please provide a valid Nekopoi link.')
     axios.get(link)
         .then((res) => {
             const $ = cheerio.load(res.data)
+            const img = $('div.thm').find('img').attr('src') 
+            const title = $('title').text().trim()
+            const link = []
+            const quality = []
+            let synopsis = ''
             $('div.contentpost').each((i, e) => {
                 $(e).find('div.konten').each((i, e) => {
                     $(e).find('p').each((i, e) => {
@@ -53,11 +58,12 @@ const nekopoiGet = (link) => new Promise((resolve, reject) => {
                     })
                 })
             })
-            const img = $('div.thm').find('img').attr('src') 
-            const title = $('title').text().trim()
-            const link = []
-            const quality = []
-            let synopsis = '-----[ NEKOPOI ]-----\n\n'
+            $('div.liner').each((i, e) => {
+                $(e).find('div.listlink').each((i, e) => {
+                    link.push($(e).find('a').attr('href'))
+                })
+                quality.push($(e).find('div.name').text())
+            })
             const json = {
                 "img": img,
                 "title": title,
@@ -80,11 +86,15 @@ const nekopoiGet = (link) => new Promise((resolve, reject) => {
  * @param {String} query 
  * @returns {Object}
  */
-const nekopoiSearch = (query) => new Promise((resolve, reject) => {
-    const url = `${baseUrl}?s=${query}`
+const search = (query) => new Promise((resolve, reject) => {
+    const url = `${baseUrl}?s=${encodeURI(query)}`
+    console.log(url)
     axios.get(url)
         .then((res) => {
             const $ = cheerio.load(res.data)
+            const img = []
+            const title = []
+            const link = []
             $('div.top').each((i, e) => {
                 $(e).find('h2').each((i, e) => {
                     title.push($(e).find('a').text().trim())
@@ -92,9 +102,6 @@ const nekopoiSearch = (query) => new Promise((resolve, reject) => {
                 })
                 img.push($(e).find('img').attr('src'))
             })
-            const img = []
-            const title = []
-            const link = []
             const json = {
                 "img": img,
                 "title": title,
@@ -110,7 +117,7 @@ const nekopoiSearch = (query) => new Promise((resolve, reject) => {
 })
 
 module.exports = {
-    nekopoiLatest,
-    nekopoiGet,
-    nekopoiSearch
+    latest,
+    get,
+    search
 }
