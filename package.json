@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "description": "Nekopoi scraper.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "SlavyanDesu",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlavyanDesu/NekoBocc.git"
+  },
+  "author": "SlavyanDesu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlavyanDesu/NekoBocc/issues"
+  },
+  "homepage": "https://github.com/SlavyanDesu/NekoBocc#readme"
 }
