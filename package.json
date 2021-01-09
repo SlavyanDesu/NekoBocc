@@ -1,0 +1,16 @@
+{
+  "name": "nekobocc",
+  "version": "1.0.0",
+  "description": "Nekopoi scraper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "SlavyanDesu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5"
+  }
+}
