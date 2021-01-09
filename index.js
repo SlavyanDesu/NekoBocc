@@ -35,6 +35,11 @@ const nekopoiLatest = () => new Promise((resolve, reject) => {
         .catch((err) => reject(err.message))
 })
 
+/**
+ * Get result from link.
+ * @param {String} link 
+ * @returns {Object}
+ */
 const nekopoiGet = (link) => new Promise((resolve, reject) => {
     if (!isLink(link)) return reject('Invalid!')
     axios.get(link)
