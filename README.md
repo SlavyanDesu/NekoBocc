@@ -1,7 +1,7 @@
 # NekoBocc
 ```js
-const nekobocc = require('nekobocc')
+const nekopoi = require('nekobocc')
 
-nekobocc.latest()
-  .then((res) => console.log(res))
+const res = await nekopoi.latest()
+console.log(res)
 ```
