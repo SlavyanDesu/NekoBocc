@@ -25,13 +25,13 @@ update()
 /*
  Expected output:
  {
-     "result": [
-         {
-             "img": string,
-             "title": string,
-             "link": string
-         }
-     ]
+   "result": [
+       {
+           "img": string,
+           "title": string,
+           "link": string
+       }
+   ]
  }
 */
 
@@ -39,15 +39,15 @@ get('nekopoi.care/xxx-xxx-episode-1')
 /*
  Expected output:
  {
-     "result": [
-         {
-             "img": string,
-             "title": string,
-             "synopsis": string,
-             "quality": string,
-             "link": string
-         }
-     ]
+   "result": [
+       {
+           "img": string,
+           "title": string,
+           "synopsis": string,
+           "quality": string,
+           "link": string
+       }
+   ]
  }
 */
 
@@ -55,13 +55,13 @@ search('shoujo ramune')
 /*
  Expected output:
  {
-     "result": [
-         {
-             "img": string,
-             "title": string,
-             "link": string
-         }
-     ]
+   "result": [
+       {
+           "img": string,
+           "title": string,
+           "link": string
+       }
+   ]
  }
 */
 ```
