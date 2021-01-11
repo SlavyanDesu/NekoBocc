@@ -1,6 +1,6 @@
 {
   "name": "nekobocc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Nekopoi scraper.",
   "main": "index.js",
   "dependencies": {
