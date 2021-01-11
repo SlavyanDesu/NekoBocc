@@ -27,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/IndonesianDev/NekoBocc/issues"
   },
-  "homepage": "https://github.com/IndonesianDev/NekoBocc#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "homepage": "https://github.com/IndonesianDev/NekoBocc#readme"
 }
