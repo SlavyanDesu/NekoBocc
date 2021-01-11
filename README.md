@@ -1,6 +1,14 @@
 # NekoBocc
 Simple Nekopoi scraper built in JavaScript.
+
+## Installation
+```bash
+> npm install nekobocc
+```
+
+## Usage
 ```js
+// Import the package
 const nekopoi = require('nekobocc')
 
 // Get latest update
@@ -9,9 +17,9 @@ async function update() {
     console.log(res)
 }
 
-// Get metadata from episode URL
-async function get(url) {
-    const res = await nekopoi.get(url)
+// Get hentai episode metadata
+async function getHentaiEpisode(url) {
+    const res = await nekopoi.getHentaiEpisode(url)
     console.log(res)
 }
 
@@ -35,7 +43,7 @@ update()
  }
 */
 
-get('nekopoi.care/xxx-xxx-episode-1')
+getHentaiEpisode('nekopoi.care/xxx-xxx-episode-1')
 /*
  Expected output:
  {
@@ -43,6 +51,9 @@ get('nekopoi.care/xxx-xxx-episode-1')
        "img": string,
        "title": string,
        "synopsis": string,
+       "genre": string,
+       "producers": string,
+       "duration": string,
        "quality": string[],
        "link": string[]
    }
