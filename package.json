@@ -7,7 +7,9 @@
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
@@ -27,6 +29,6 @@
   },
   "homepage": "https://github.com/IndonesianDev/NekoBocc#readme",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
