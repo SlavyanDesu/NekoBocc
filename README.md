@@ -29,7 +29,7 @@ update()
        {
            "img": string,
            "title": string,
-           "link": string
+           "link": string[]
        }
    ]
  }
@@ -43,8 +43,8 @@ get('nekopoi.care/xxx-xxx-episode-1')
        "img": string,
        "title": string,
        "synopsis": string,
-       "quality": string,
-       "link": string
+       "quality": string[],
+       "link": string[]
    }
  }
 */
@@ -57,7 +57,7 @@ search('shoujo ramune')
        {
            "img": string,
            "title": string,
-           "link": string
+           "link": string[]
        }
    ]
  }
