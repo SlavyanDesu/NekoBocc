@@ -14,14 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SlavyanDesu/NekoBocc.git"
+    "url": "git+https://github.com/IndonesianDev/NekoBocc.git"
   },
+  "keywords": [
+    "nekopoi",
+    "scraper"
+  ],
   "author": "SlavyanDesu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SlavyanDesu/NekoBocc/issues"
+    "url": "https://github.com/IndonesianDev/NekoBocc/issues"
   },
-  "homepage": "https://github.com/SlavyanDesu/NekoBocc#readme",
+  "homepage": "https://github.com/IndonesianDev/NekoBocc#readme",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   }
