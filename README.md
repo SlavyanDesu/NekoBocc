@@ -39,15 +39,13 @@ get('nekopoi.care/xxx-xxx-episode-1')
 /*
  Expected output:
  {
-   "result": [
-       {
-           "img": string,
-           "title": string,
-           "synopsis": string,
-           "quality": string,
-           "link": string
-       }
-   ]
+   "result": {
+       "img": string,
+       "title": string,
+       "synopsis": string,
+       "quality": string,
+       "link": string
+   }
  }
 */
 
