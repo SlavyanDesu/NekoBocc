@@ -29,6 +29,18 @@ async function search(query) {
     console.log(res)
 }
 
+// Get hentai metadata
+async function getHentai(url) {
+    const res = await nekopoi.getHentai(url)
+    console.log(res)
+}
+
+// Get random hentai
+async function random() {
+    const res = await nekopoi.random()
+    console.log(res)
+}
+
 update()
 /*
  Expected output:
@@ -43,7 +55,7 @@ update()
  }
 */
 
-getHentaiEpisode('nekopoi.care/xxx-xxx-episode-1')
+getHentaiEpisode('https://nekopoi.care/xxx-xxx-episode-1')
 /*
  Expected output:
  {
@@ -71,6 +83,50 @@ search('shoujo ramune')
            "link": string[]
        }
    ]
+ }
+*/
+
+getHentai('https://nekopoi.care/hentai/xxxxxx')
+/*
+ Expected output:
+ {
+    "result": {
+        img: string,
+        title: string,
+        synopsis: string,
+        views: number,
+        japanese: string,
+        category: string,
+        episode: number,
+        status: string,
+        aired: string,
+        producers: string,
+        genre: string,
+        duration: string,
+        score: number
+    }
+ }
+*/
+
+random()
+/*
+ Expected output:
+ {
+    "result": {
+        img: string,
+        title: string,
+        synopsis: string,
+        views: number,
+        japanese: string,
+        category: string,
+        episode: number,
+        status: string,
+        aired: string,
+        producers: string,
+        genre: string,
+        duration: string,
+        score: number
+    }
  }
 */
 ```
