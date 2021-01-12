@@ -1,5 +1,5 @@
 # NekoBocc
-Simple Nekopoi scraper built in JavaScript.
+Nekopoi unofficial API.
 
 ## Installation
 ```bash
