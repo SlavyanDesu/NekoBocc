@@ -12,14 +12,8 @@ Nekopoi unofficial API.
 const nekopoi = require('nekobocc')
 
 // Get latest update
-async function update() {
+async function latest() {
     const res = await nekopoi.latest()
-    console.log(res)
-}
-
-// Get hentai episode metadata
-async function getHentaiEpisode(url) {
-    const res = await nekopoi.getHentaiEpisode(url)
     console.log(res)
 }
 
@@ -41,48 +35,43 @@ async function random() {
     console.log(res)
 }
 
-update()
+latest()
 /*
  Expected output:
- {
-   "result": [
-       {
-           "img": string,
-           "title": string,
-           "link": string[]
-       }
-   ]
- }
-*/
-
-getHentaiEpisode('https://nekopoi.care/xxx-xxx-episode-1')
-/*
- Expected output:
- {
-   "result": {
-       "img": string,
-       "title": string,
-       "synopsis": string,
-       "genre": string,
-       "producers": string,
-       "duration": string,
-       "quality": string[],
-       "link": string[]
-   }
- }
+ [
+    {
+        img: string,
+        title: string,
+        link: string
+    }
+ ]
 */
 
 search('shoujo ramune')
 /*
  Expected output:
+ [
+    {
+        img: string,
+        title: string,
+        link: string
+    }
+ ]
+*/
+
+// If you put episode link instead of hentai, you will get below result.
+getHentai('https://nekopoi.care/xxxx-episode-x-xxxx')
+/*
+ Expected output:
  {
-   "result": [
-       {
-           "img": string,
-           "title": string,
-           "link": string[]
-       }
-   ]
+    img: string,
+    title: string,
+    synopsis: string,
+    genre: string,
+    producers: string,
+    duration: string,
+    quality: string[]
+    link: string[]
  }
 */
 
@@ -90,21 +79,19 @@ getHentai('https://nekopoi.care/hentai/xxxxxx')
 /*
  Expected output:
  {
-    "result": {
-        img: string,
-        title: string,
-        synopsis: string,
-        views: number,
-        japanese: string,
-        category: string,
-        episode: number,
-        status: string,
-        aired: string,
-        producers: string,
-        genre: string,
-        duration: string,
-        score: number
-    }
+    img: string,
+    title: string,
+    synopsis: string,
+    views: number,
+    japanese: string,
+    category: string,
+    episode: number,
+    status: string,
+    aired: string,
+    producers: string,
+    genre: string,
+    duration: string,
+    score: number
  }
 */
 
@@ -112,21 +99,18 @@ random()
 /*
  Expected output:
  {
-    "result": {
-        img: string,
-        title: string,
-        synopsis: string,
-        views: number,
-        japanese: string,
-        category: string,
-        episode: number,
-        status: string,
-        aired: string,
-        producers: string,
-        genre: string,
-        duration: string,
-        score: number
-    }
+    img: string,
+    title: string,
+    synopsis: string,
+    views: number,
+    japanese: string,
+    category: string,
+    episode: number,
+    status: string,
+    aired: string,
+    producers: string,
+    genre: string,
+    duration: string,
+    score: number
  }
 */
-```

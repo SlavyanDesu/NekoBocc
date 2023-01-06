@@ -1,8 +1,0 @@
-{
-    "include": ["lib/NekoBocc.js"],
-    "compilerOptions": {
-        "allowJs": true,
-        "declaration": true,
-        "emitDeclarationOnly": true
-    }
-}

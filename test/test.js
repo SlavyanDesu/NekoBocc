@@ -1,7 +1,8 @@
 const nekobocc = require('../lib/NekoBocc')
 
-async function update() {
-    console.log(await nekobocc.latest())
+async function random() {
+    const res = await nekobocc.random()
+    console.log(res)
 }
 
-update()
+random()
