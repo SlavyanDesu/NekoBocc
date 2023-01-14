@@ -1,4 +1,4 @@
-import * as neko from '../dist/esm/NekoBocc.js'
+const neko = require('../dist/cjs/NekoBocc.js')
 
 async function latest() {
 	const result = await neko.latest()

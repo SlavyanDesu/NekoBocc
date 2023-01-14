@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist/esm",
+    "allowJs": true,
+    "target": "ES6",
+    "moduleResolution": "node",
+    "module": "ES2020",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "./dist/types"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "./test"]
+}
