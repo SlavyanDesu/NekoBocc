@@ -104,12 +104,14 @@ Get latest post from nekopoi.care
 return a `NekopoiResult`
 
 ### nekobocc.search(query)
-- `query` is a `string` an you need to pass it, otherwise will resulting an error  
+- `query` is a `string` an you need to pass it, otherwise will resulting an error
+
 Get search result from given `query`  
 return a `NekopoiResult`
 
 ### nekobocc.get(url)
 - `url` is a valid nekopoi.care URL and only accept episode URL and page URL
+
 Get metadata of hentai/JAV from given URL  
 return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
 
