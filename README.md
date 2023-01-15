@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Neko<span style="color: #BB2649">Bocc</span></h1>
+    <a href="https://ibb.co/ryjz6zL"><img src="https://i.ibb.co/s3fNwND/20230115-133928.jpg" alt="20230115-133928" border="0"></a>
     <br>
     <p>A simple and lightweight Nekopoi scraper.</p>
     <a href="https://opensource.org/licenses/mit-license.php"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103"></a>
@@ -18,6 +18,7 @@ npm install nekobocc
 
 ## Loading and configuring the module
 As of v1.2.x this module now support both ESM and CommonJS.
+
 ### ES Modules (ESM)
 ```js
 import nekobocc from 'nekobocc';
@@ -34,7 +35,7 @@ import nekobocc from 'nekobocc';
 
 // Get latest post 
 (async function() {
-	console.log(await neko.latest())
+	console.log(await neko.latest());
 })();
 ```
 
@@ -104,24 +105,18 @@ return a `NekopoiResult`
 
 ### nekobocc.search(query)
 - `query` is a `string` an you need to pass it, otherwise will resulting an error  
-<br>
-Get search result from given `query`
-<br>
+Get search result from given `query`  
 return a `NekopoiResult`
 
 ### nekobocc.get(url)
 - `url` is a valid nekopoi.care URL and only accept episode URL and page URL
-<br>
-Get metadata of hentai/JAV from given URL
-<br>
+Get metadata of hentai/JAV from given URL  
 return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
 
 ### nekobocc.random()
-Get random hentai/JAV
-<br>
+Get random hentai/JAV  
 return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
 
 ## License
-[MIT](LICENSE)
-<br>
+[MIT](LICENSE)  
 <div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large"></a></div>
