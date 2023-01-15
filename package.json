@@ -1,8 +1,8 @@
 {
   "name": "nekobocc",
   "version": "1.2.0",
-  "description": "NekoBocc is a simple Nekopoi scraper.",
-  "main": "./dist/esm/NekoBocc.js",
+  "description": "A simple and lightweight Nekopoi scraper.",
+  "main": "./dist/cjs/NekoBocc.js",
   "types": "./dist/types/NekoBocc.d.ts",
   "dependencies": {
     "axios": "^1.2.2",
@@ -15,18 +15,23 @@
     "build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
   },
   "exports": {
-    "import": "./dist/esm/NekoBocc.js",
-    "require": "./dist/cjs/NekoBocc.js",
-    "default": "./dist/esm/NekoBocc.js"
+    ".": {
+      "import": "./dist/esm/NekoBocc.js",
+      "require": "./dist/cjs/NekoBocc.js",
+      "default": "./dist/esm/NekoBocc.js"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IndonesianDev/NekoBocc.git"
+    "url": "git://https://github.com/IndonesianDev/NekoBocc.git"
   },
   "keywords": [
     "nekopoi",
     "scraper",
-    "api"
+    "hentai",
+    "scraper-api",
+    "anime-scraper",
+    "nekopoi-scraper"
   ],
   "author": "SlavyanDesu",
   "license": "MIT",
