@@ -20,4 +20,4 @@ async function random() {
 	console.log(result)
 }
 
-random()
+get('https://nekopoi.care/hentai/mako-chan-kaihatsu-nikki/')

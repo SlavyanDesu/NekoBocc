@@ -36,4 +36,3 @@ export declare const latest: () => Promise<NekopoiResult[] | undefined>;
 export declare const search: (query: string) => Promise<NekopoiResult[] | void>;
 export declare const get: (url: string) => Promise<NekopoiEpisodeMetadata | NekopoiPageMetadata | void>;
 export declare const random: () => Promise<NekopoiEpisodeMetadata | NekopoiPageMetadata | void>;
-//# sourceMappingURL=NekoBocc.d.ts.map

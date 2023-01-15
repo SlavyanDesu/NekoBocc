@@ -10,13 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 const baseUrl = 'https://nekopoi.care/';
-const valid = (url) => url.match(new RegExp(/^(?:https?:\/\/)?(?:[^\.]+\.)?nekopoi\.care(\/.*)?$/gm));
+const valid = (url) => url.match(new RegExp(/^(?:https?:\/\/)?(?:[^.]+\.)?nekopoi\.care(\/.*)?$/gm));
 const header = {
     headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
     }
 };
-
 export const latest = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const res = yield axios.get(baseUrl, header);
@@ -39,7 +38,6 @@ export const latest = () => __awaiter(void 0, void 0, void 0, function* () {
         console.error(err);
     }
 });
-
 export const search = (query) => __awaiter(void 0, void 0, void 0, function* () {
     if (!query) {
         return console.error('Please provide a search terms.');
@@ -68,7 +66,6 @@ export const search = (query) => __awaiter(void 0, void 0, void 0, function* () 
         }
     }
 });
-
 export const get = (url) => __awaiter(void 0, void 0, void 0, function* () {
     if (!valid(url)) {
         return console.error('Please provide a valid Nekopoi link!');
@@ -139,7 +136,6 @@ export const get = (url) => __awaiter(void 0, void 0, void 0, function* () {
         }
     }
 });
-
 export const random = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const res = yield axios.get(`${baseUrl}random`, header);
