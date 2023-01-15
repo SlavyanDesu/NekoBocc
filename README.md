@@ -4,16 +4,12 @@
     <p>A simple and lightweight Nekopoi scraper.</p>
     <a href="https://opensource.org/licenses/mit-license.php"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103"></a>
     <a href="https://www.npmjs.com/package/nekobocc"><img src="https://img.shields.io/npm/v/node-fetch"></a>
-<a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=shield"/></a>
     <a href="https://packagephobia.com/result?p=nekobocc"><img src="https://packagephobia.com/badge?p=nekobocc"></a>
     <a href="https://www.codefactor.io/repository/github/indonesiandev/nekobocc"><img src="https://www.codefactor.io/repository/github/indonesiandev/nekobocc/badge"></a>
     <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=shield"/></a>
 </div>
 
 ---
-
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large)
 
 ## Installation
 ```sh
@@ -127,3 +123,5 @@ return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
 
 ## License
 [MIT](LICENSE)
+<br>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large" align="center"></a>
