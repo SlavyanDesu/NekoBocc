@@ -124,4 +124,4 @@ return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
 ## License
 [MIT](LICENSE)
 <br>
-<a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large" align="center"></a>
+<div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large"></a></div>
