@@ -96,8 +96,8 @@ import nekobocc from 'nekobocc';
 ```
 
 ## API
-**nekobocc.latest()**	
-Get latest post from nekopoi.care	
+**nekobocc.latest()**		
+Get latest post from nekopoi.care		
 return a `NekopoiResult`	
 	
 **nekobocc.search(query)**	
