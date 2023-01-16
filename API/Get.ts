@@ -57,13 +57,13 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
       })
       const result: EpisodeMetadata = {
         img: img,
-				title: title,
-				synopsis: array[1].text,
-				genre: array[2].text.replace('Genre : ', ''),
-				producer: array[4].text.replace('Producers : ', ''),
-				duration: array[5].text.replace('Duration : ', ''),
-				quality: quality,
-				download: download
+        title: title,
+        synopsis: array[1].text,
+        genre: array[2].text.replace('Genre : ', ''),
+        producer: array[4].text.replace('Producers : ', ''),
+        duration: array[5].text.replace('Duration : ', ''),
+        quality: quality,
+        download: download
       }
       return result
     }
