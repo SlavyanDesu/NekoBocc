@@ -5,6 +5,5 @@
     "outDir": "dist/esm",
     "declarationDir": "dist/types",
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"]
 }
