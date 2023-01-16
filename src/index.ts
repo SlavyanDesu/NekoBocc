@@ -1,6 +1,6 @@
 import { release, search, get, random } from '../API/index.js'
-import { valid } from '../util/index.js'
-import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from '../util/index.js'
+import { valid } from '../util/shared.js'
+import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from '../util/interfaces.js'
 
 export default class NekoBocc {
   constructor() {}
