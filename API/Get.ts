@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { load } from 'cheerio'
-import { header } from '../util/index.js'
-import type { HentaiMetadata, EpisodeMetadata, TextIndex } from '../util/index.js'
+import { header } from '../util/shared.js'
+import type { HentaiMetadata, EpisodeMetadata, TextIndex } from '../util/interfaces.js'
 
 /**
  * Get metadata of episode or hentai page from a valid URL.
