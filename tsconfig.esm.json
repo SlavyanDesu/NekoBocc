@@ -5,5 +5,4 @@
     "outDir": "dist/esm",
     "declarationDir": "dist/types",
   },
-  "include": ["src/**/*"]
 }
