@@ -1,22 +1,15 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitReturns": true,
-    "noImplicitOverride": true,
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "moduleResolution": "Node"
+    "skipLibCheck": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
