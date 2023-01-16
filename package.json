@@ -1,7 +1,7 @@
 {
   "name": "nekobocc-ts",
   "version": "1.2.7",
-  "description": "A lightweight and small Nekopoi scraper.",
+  "description": "A simple and lightweight Nekopoi scraper.",
   "main": "./dist/esm/src/index.js",
   "types": "./dist/types/src/index.d.ts",
   "exports": {
@@ -9,6 +9,9 @@
     "require": "./dist/cjs/src/index.js",
     "default": "./dist/esm/src/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "node test/index.js",
     "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json"
