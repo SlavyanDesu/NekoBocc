@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { header, baseUrl, endpoints } from '../util/index.js'
+import { header, baseUrl, endpoints } from '../util/shared.js'
 import { get } from './Get.js'
-import type { HentaiMetadata, EpisodeMetadata } from '../util/index.js'
+import type { HentaiMetadata, EpisodeMetadata } from '../util/interfaces.js'
 
 /**
  * Get random hentai or episode page.
