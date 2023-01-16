@@ -16,7 +16,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "Node"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
