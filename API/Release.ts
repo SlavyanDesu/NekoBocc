@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { load } from 'cheerio'
-import { baseUrl, endpoints, header } from '../util/index.js'
-import type { HentaiRelease } from '../util/index.js'
+import { baseUrl, endpoints, header } from '../util/shared.js'
+import type { HentaiRelease } from '../util/interfaces.js'
 
 /**
  * Get list of released hentai.
@@ -24,11 +24,8 @@ export const release = async (page: number = 1): Promise<HentaiRelease[]> => {
         url
       })
     })
-    console.log(array)
     return array
   } catch (err) {
     throw err
   }
 }
-
-release()
