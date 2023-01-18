@@ -1,17 +1,9 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist/cjs",
-    "allowJs": true,
-    "target": "ES6",
-    "moduleResolution": "node",
     "module": "CommonJS",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationDir": "./dist/types"
+    "outDir": "dist/cjs"
   },
-  "include": ["./src/**/*"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

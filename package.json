@@ -1,45 +1,41 @@
 {
-  "name": "nekobocc",
-  "version": "1.2.0",
+  "name": "nekobocc-ts",
+  "version": "1.3.2",
   "description": "A simple and lightweight Nekopoi scraper.",
-  "main": "./dist/cjs/NekoBocc.js",
-  "types": "./dist/types/NekoBocc.d.ts",
-  "dependencies": {
-    "axios": "^1.2.2",
-    "cheerio": "^1.0.0-rc.5"
-  },
-  "type": "module",
-  "scripts": {
-    "test": "node test/test.js",
-    "test:cjs": "node test/test.cjs",
-    "build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
-  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "files": ["dist"],
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/esm/NekoBocc.js",
-      "require": "./dist/cjs/NekoBocc.js",
-      "default": "./dist/esm/NekoBocc.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git://https://github.com/IndonesianDev/NekoBocc.git"
+  "scripts": {
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "clean": "rimraf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --ignore-path .gitignore --config .prettierrc --write \"**/*.ts\""
   },
-  "keywords": [
-    "nekopoi",
-    "scraper",
-    "hentai",
-    "scraper-api",
-    "anime-scraper",
-    "nekopoi-scraper"
-  ],
   "author": "SlavyanDesu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IndonesianDev/NekoBocc/issues"
+  "dependencies": {
+    "axios": "^1.2.2",
+    "cheerio": "^1.0.0-rc.12"
   },
-  "homepage": "https://github.com/IndonesianDev/NekoBocc#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   }
