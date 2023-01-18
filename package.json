@@ -1,6 +1,6 @@
 {
   "name": "nekobocc",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A simple and lightweight Nekopoi scraper.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
