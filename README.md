@@ -23,11 +23,13 @@ As of v1.3.x this module now support both ESM and CommonJS.
 ## ES Modules (ESM)
 ```js
 import NekoBocc from 'nekobocc'
+const nekobocc = new NekoBocc()
 ```
 
 ## CommonJS
 ```js
 const NekoBocc = require('nekobocc').default
+const nekobocc = new NekoBocc()
 ```
 
 # Example
