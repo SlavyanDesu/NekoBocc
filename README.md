@@ -12,27 +12,27 @@
 
 ---
 
-# Installation
+## Installation
 ```sh
-npm install nekobocc
+$ npm install nekobocc
 ```
 
-# Loading and configuring the module
+## Loading and configuring the module
 As of v1.3.x this module now support both ESM and CommonJS.
 
-## ES Modules (ESM)
+### ES Modules (ESM)
 ```js
 import NekoBocc from 'nekobocc'
 const nekobocc = new NekoBocc()
 ```
 
-## CommonJS
+### CommonJS
 ```js
 const NekoBocc = require('nekobocc').default
 const nekobocc = new NekoBocc()
 ```
 
-# Example
+## Example
 ```js
 import NekoBocc from 'nekobocc'
 const nekobocc = new NekoBocc()
@@ -42,7 +42,7 @@ nekobocc.release()
   .then(res => console.log(res))
 ```
 
-# Results
+## Results
 - **HentaiRelease**
 ```js
 [
@@ -100,30 +100,30 @@ nekobocc.release()
 }
 ```
 
-# API
-## `nekobocc.release(page?)`
-- `page?` Page number to be shown. Default is `1`.
+## API
+**nekobocc.release([page])**
+- `page` Page number to be shown. Default is `1`.
 
 Get list of released hentai.
 <br>
 return a `HentaiRelease`
 
-## `nekobocc.search(query)`
+**nekobocc.search(query)**
 - `query` is a `string` and you need to pass it, otherwise will resulting an error.
 
 Get search result from given `query`.  
 return a `HentaiRelease`
 
-## `nekobocc.get(url)`
+**nekobocc.get(url)**
 - `url` Nekopoi episode or hentai page URL.
 
 Get metadata of episode or hentai page from a valid URL.  
 return a `HentaiMetadata` or `EpisodeMetadata`
 
-## `nekobocc.random()`
+**nekobocc.random()**  
 Get random hentai or episode page.  
 return a `HentaiMetadata` or `EpisodeMetadata`
 
-# License
+## License
 [MIT](LICENSE)  
 <div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large"></a></div>
