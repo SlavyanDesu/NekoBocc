@@ -20,7 +20,8 @@
     "clean": "rimraf dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --ignore-path .gitignore --config .prettierrc --write \"**/*.ts\""
+    "format": "prettier --ignore-path .gitignore --config .prettierrc --write \"**/*.ts\"",
+    "test": "node ./test/test.js"
   },
   "author": "SlavyanDesu",
   "license": "MIT",

@@ -12,36 +12,36 @@
 
 ---
 
-## Installation
+# Installation
 ```sh
 npm install nekobocc
 ```
 
-## Loading and configuring the module
-As of v1.2.x this module now support both ESM and CommonJS.
+# Loading and configuring the module
+As of v1.3.x this module now support both ESM and CommonJS.
 
-### ES Modules (ESM)
+## ES Modules (ESM)
 ```js
-import nekobocc from 'nekobocc';
+import NekoBocc from 'nekobocc'
 ```
 
-### CommonJS
+## CommonJS
 ```js
-const nekobocc = require('nekobocc');
+const NekoBocc = require('nekobocc').default
 ```
 
-## Example
+# Example
 ```js
-import nekobocc from 'nekobocc';
+import NekoBocc from 'nekobocc'
+const nekobocc = new NekoBocc()
 
-// Get latest post 
-(async function() {
-	console.log(await neko.latest());
-})();
+// Get list of released hentai.
+nekobocc.release()
+  .then(res => console.log(res))
 ```
 
-## Results
-- **NekopoiResult**
+# Results
+- **HentaiRelease**
 ```js
 [
     {
@@ -57,21 +57,21 @@ import nekobocc from 'nekobocc';
     ...
 ]
 ```
-- **NekopoiEpisodeMetadata**
+- **EpisodeMetadata**
 ```js
 {
     img: 'https://nekopoi.care/wp-content/uploads/2023/01/vlcsnap-2023-01-01-03h58m25s923-300x169.png',
     title: '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia – NekoPoi',
     synopsis: 'Makoto tiba-tiba berpacaran dengan teman masa kecilnya yaitu Kaoru. Makoto ternyata adalah cewek yang mesum yang tiap malam menonton bokep sambil colmek yang ia dapat dari menyelinap di kamar kakaknya. Namun suatu malam di hari pertama Makoto berpacaran, ia tertangkap basah sedang colmek oleh kakaknya. Dengan rasa gatal yang menyengat dan kemampuan kakaknya akan pengetahuan seks, membuat Makoto tidak dapat menahan godaan untuk bermain dengan kakaknya…',
     genre: 'Ahegao, Anal, Big Oppai, Blowjob, Incest, Masturbation, Netorare, Schoolgirl',
-    producers: 'T-Rex, Bunny Walker',
+    producer: 'T-Rex, Bunny Walker',
     duration: '16 menit',
     quality: [
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [720p]',
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [480p]',
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [360p]'
     ],
-    link: [
+    download: [
         'https://drop.download/l1xk0tzboojp',
         'https://drop.download/hh3fc2nybs8d',
         'https://drop.download/u5wy5nu4iwqj'
@@ -79,7 +79,7 @@ import nekobocc from 'nekobocc';
 }
 ```
 
-- **NekopoiPageMetadata**
+- **HentaiMetadata**
 ```js
 {
     img: 'https://nekopoi.care/wp-content/uploads/2021/07/MakochanKaihatsuNikkiep69538176cde48c8e3ebb65761cb63504-213x300.jpg',
@@ -91,35 +91,37 @@ import nekobocc from 'nekobocc';
     episode: 4,
     status: 'Completed',
     aired: 'Jul 02, 2021',
-    producers: 'T-Rex, Bunny Walker',
+    producer: 'T-Rex, Bunny Walker',
     genre: 'Ahegao, Anal, Big Oppai, Blowjob, Incest, Masturbation, Netorare, Schoolgirl',
     duration: '16 min',
     score: 7
 }
 ```
 
-## API
-### nekobocc.latest()
-Get latest post from nekopoi.care
+# API
+## `nekobocc.release(page?)`
+- `page?` Page number to be shown. Default is `1`.
+
+Get list of released hentai.
 <br>
-return a `NekopoiResult`
+return a `HentaiRelease`
 
-### nekobocc.search(query)
-- `query` is a `string` an you need to pass it, otherwise will resulting an error
+## `nekobocc.search(query)`
+- `query` is a `string` and you need to pass it, otherwise will resulting an error.
 
-Get search result from given `query`  
-return a `NekopoiResult`
+Get search result from given `query`.  
+return a `HentaiRelease`
 
-### nekobocc.get(url)
-- `url` is a valid nekopoi.care URL and only accept episode URL and page URL
+## `nekobocc.get(url)`
+- `url` Nekopoi episode or hentai page URL.
 
-Get metadata of hentai/JAV from given URL  
-return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
+Get metadata of episode or hentai page from a valid URL.  
+return a `HentaiMetadata` or `EpisodeMetadata`
 
-### nekobocc.random()
-Get random hentai/JAV  
-return a `NekopoiEpisodeMetadata` or `NekopoiPageMetadata`
+## `nekobocc.random()`
+Get random hentai or episode page.  
+return a `HentaiMetadata` or `EpisodeMetadata`
 
-## License
+# License
 [MIT](LICENSE)  
 <div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large"></a></div>
