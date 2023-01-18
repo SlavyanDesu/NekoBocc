@@ -13,6 +13,13 @@
       "types": "./dist/types/index.d.ts"
     }
   },
+  "keywords": [
+    "scraper",
+    "nekopoi",
+    "downloader",
+    "api",
+    "hentai"
+  ],
   "scripts": {
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p tsconfig.esm.json",
