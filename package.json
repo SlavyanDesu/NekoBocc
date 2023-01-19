@@ -4,7 +4,6 @@
   "description": "A simple and lightweight Nekopoi scraper.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "files": ["dist"],
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
@@ -13,6 +12,9 @@
       "types": "./dist/types/index.d.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "scraper",
     "nekopoi",

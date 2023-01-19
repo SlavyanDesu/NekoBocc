@@ -1,6 +1,6 @@
-import { release, search, get, random } from './API/index.js'
-import { valid } from './util/shared.js'
-import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from './util/interfaces.js'
+import { release, search, get, random } from './API/index.js';
+import { valid } from './util/shared.js';
+import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from './util/interfaces.js';
 
 export default class NekoBocc {
   /**
@@ -10,7 +10,7 @@ export default class NekoBocc {
    * @returns {Promise<HentaiRelease[]>} Array object of latest release.
    */
   release(page?: number): Promise<HentaiRelease[]> {
-    return release(page)
+    return release(page);
   }
 
   /**
@@ -21,9 +21,9 @@ export default class NekoBocc {
    */
   search(query: string): Promise<HentaiRelease[]> {
     if (!query || valid(query)) {
-      throw Error('Please provide a valid search query!')
+      throw Error('Please provide a valid search query!');
     } else {
-      return search(query)
+      return search(query);
     }
   }
 
@@ -35,9 +35,9 @@ export default class NekoBocc {
    */
   get(url: string): Promise<HentaiMetadata | EpisodeMetadata> {
     if (!url || !valid(url)) {
-      throw Error('Please provide a valid URL!')
+      throw Error('Please provide a valid URL!');
     } else {
-      return get(url)
+      return get(url);
     }
   }
 
@@ -47,6 +47,6 @@ export default class NekoBocc {
    * @returns {Promise<HentaiMetadata | EpisodeMetadata>} Object of episode or hentai metadata.
    */
   random(): Promise<HentaiMetadata | EpisodeMetadata> {
-    return random()
+    return random();
   }
 }

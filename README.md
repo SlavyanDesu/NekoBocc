@@ -22,24 +22,24 @@ As of v1.3.x this module now support both ESM and CommonJS.
 
 ### ES Modules (ESM)
 ```js
-import NekoBocc from 'nekobocc'
-const nekobocc = new NekoBocc()
+import NekoBocc from 'nekobocc';
+const nekobocc = new NekoBocc();
 ```
 
 ### CommonJS
 ```js
-const NekoBocc = require('nekobocc').default
-const nekobocc = new NekoBocc()
+const NekoBocc = require('nekobocc').default;
+const nekobocc = new NekoBocc();
 ```
 
 ## Example
 ```js
-import NekoBocc from 'nekobocc'
-const nekobocc = new NekoBocc()
+import NekoBocc from 'nekobocc';
+const nekobocc = new NekoBocc();
 
 // Get list of released hentai.
 nekobocc.release()
-  .then(res => console.log(res))
+  .then(res => console.log(res));
 ```
 
 ## Results
@@ -102,7 +102,7 @@ nekobocc.release()
 
 ## API
 **nekobocc.release([page])**
-- `page` Page number to be shown. Default is `1`.
+- `page` Page number to be shown, this parameter is optional. Default is `1`.
 
 Get list of released hentai.
 <br>
