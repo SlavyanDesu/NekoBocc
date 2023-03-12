@@ -1,6 +1,6 @@
 {
   "name": "nekobocc",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "A simple and lightweight Nekopoi scraper.",
   "type": "commonjs",
   "main": "./dist/cjs/index.js",
@@ -37,7 +37,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --ignore-path .gitignore --config .prettierrc --write \"**/*.ts\"",
-    "prepublishOnly": "npm run lint:fix && npm run format && npm run build"
+    "prepublishOnly": "npm run lint:fix && npm run format && npm run build",
+    "test": "ts-node-esm src/index.ts"
   },
   "author": "SlavyanDesu",
   "license": "MIT",

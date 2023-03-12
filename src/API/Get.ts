@@ -48,12 +48,14 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
   } else {
     const img = $('div.thm').find('img').attr('src');
     const title = $('title').text();
-    let quality, download;
+    const quality: string[] = [];
+    const download: string[] = [];
     const array: TextIndex[] = [];
 
     $('div.liner').each((_i, e) => {
       quality.push($(e).find('div.name').text());
-      download.push($(e).find('a').attr('href'));
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      download.push($(e).find('a').attr('href')!);
     });
 
     $('div.konten p').each((_i, e) => {
