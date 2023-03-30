@@ -80,6 +80,11 @@ export interface HentaiMetadata {
    * Score of hentai.
    */
   score?: number;
+
+  /**
+   * URL of episode(s).
+   */
+  url?: string[];
 }
 
 export interface EpisodeMetadata {

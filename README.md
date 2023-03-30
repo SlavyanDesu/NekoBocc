@@ -2,12 +2,11 @@
     <a href="https://ibb.co/ryjz6zL"><img src="https://i.ibb.co/s3fNwND/20230115-133928.jpg" alt="20230115-133928" border="0"></a>
     <br>
     <p>A simple and lightweight Nekopoi scraper.</p>
-    <a href="https://opensource.org/licenses/mit-license.php"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103"></a>
-    <a href="https://www.npmjs.com/package/nekobocc"><img src="https://img.shields.io/npm/v/node-fetch"></a>
+    <a href="https://badge.fury.io/js/nekobocc"><img src="https://badge.fury.io/js/nekobocc.svg"</a>
     <a href="https://packagephobia.com/result?p=nekobocc"><img src="https://packagephobia.com/badge?p=nekobocc"></a>
     <br>
     <a href="https://www.codefactor.io/repository/github/slavyandesu/nekobocc"><img src="https://www.codefactor.io/repository/github/slavyandesu/nekobocc/badge" alt="CodeFactor" /></a>
-    <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=shield"/></a>
+    <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FSlavyanDesu%2FNekoBocc?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FSlavyanDesu%2FNekoBocc.svg?type=shield"/></a>
 </div>
 
 ---
@@ -69,14 +68,16 @@ nekobocc.release()
     producer: 'T-Rex, Bunny Walker',
     duration: '16 menit',
     quality: [
+        '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [1080p]',
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [720p]',
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [480p]',
         '[NEW Release] Mako-chan Kaihatsu Nikki Episode 4 Subtitle Indonesia [360p]'
     ],
     download: [
-        'https://drop.download/l1xk0tzboojp',
-        'https://drop.download/hh3fc2nybs8d',
-        'https://drop.download/u5wy5nu4iwqj'
+        'https://ouo.io/wshoBm',
+        'https://ouo.io/7Hol1z',
+        'https://ouo.io/m75Mbm',
+        'https://ouo.io/7MLHJz'
     ]
 }
 ```
@@ -96,7 +97,13 @@ nekobocc.release()
     producer: 'T-Rex, Bunny Walker',
     genre: 'Ahegao, Anal, Big Oppai, Blowjob, Incest, Masturbation, Netorare, Schoolgirl',
     duration: '16 min',
-    score: 7
+    score: 7,
+    url: [
+        'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-1-subtitle-indonesia/',
+        'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-2-subtitle-indonesia/',
+        'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-3-subtitle-indonesia/',
+        'https://nekopoi.care/mako-chan-kaihatsu-nikki-episode-4-subtitle-indonesia/'
+    ]
 }
 ```
 
@@ -126,4 +133,4 @@ return a `HentaiMetadata` or `EpisodeMetadata`
 
 ## License
 [MIT](LICENSE)  
-<div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc?ref=badge_large"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FIndonesianDev%2FNekoBocc.svg?type=large"></a></div>
+<div align="center"><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FSlavyanDesu%2FNekoBocc?ref=badge_large" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FSlavyanDesu%2FNekoBocc.svg?type=large"/></a></div>

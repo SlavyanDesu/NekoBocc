@@ -18,10 +18,13 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
     const title = $('title').text();
     const synopsis = $('span.desc').find('p').text();
     const views = Number($('div.tabs.tab2').last().text().split(' ')[0]);
+    const url: string[] = [];
     let episode;
 
-    $('div.episodelist').each((_i, e) => {
-      episode = $(e).find('li').length;
+    $('div.episodelist > ul > li').each((_i, e) => {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      url.push($(e).find('a').attr('href')!);
+      episode = url.length;
     });
 
     const array: TextIndex[] = [];
@@ -42,7 +45,8 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
       producer: array[5].text.replace('Produser: ', ''),
       genre: array[6].text.replace('Genres: ', ''),
       duration: array[7].text.replace('Durasi: ', ''),
-      score: Number(array[8].text.replace('Skor: ', ''))
+      score: Number(array[8].text.replace('Skor: ', '')),
+      url: url
     };
     return result;
   } else {
@@ -55,7 +59,7 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
     $('div.liner').each((_i, e) => {
       quality.push($(e).find('div.name').text());
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      download.push($(e).find('a').attr('href')!);
+      download.push($(e).find('a').last().attr('href')!);
     });
 
     $('div.konten p').each((_i, e) => {
