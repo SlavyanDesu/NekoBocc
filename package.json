@@ -59,7 +59,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3",
-    "rimraf": "^4.1.1",
+    "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "tsconfig-to-dual-package": "^1.1.0",
     "typescript": "^5.0.2"
