@@ -1,6 +1,6 @@
-import { release, search, get, random } from './API/index.js';
-import { valid } from './util/shared.js';
-import type { HentaiRelease, HentaiMetadata, EpisodeMetadata } from './util/interfaces.js';
+import { get, random, release, search } from './API/index';
+import type { EpisodeMetadata, HentaiMetadata, HentaiRelease } from './util/interfaces';
+import { valid } from './util/shared';
 
 export default class NekoBocc {
   /**
@@ -50,3 +50,8 @@ export default class NekoBocc {
     return random();
   }
 }
+
+const nekobocc = new NekoBocc();
+
+// Get list of released hentai.
+nekobocc.get('https://nekopoi.care/shoujo-ramune-episode-4-subtitle-indonesia/').then((res) => console.log(res));

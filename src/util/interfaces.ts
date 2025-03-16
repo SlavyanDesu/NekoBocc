@@ -13,6 +13,16 @@ export interface HentaiRelease {
    * URL of post.
    */
   url?: string;
+
+  /**
+   * Genre of post.
+   */
+  genre?: string;
+
+  /**
+   * Duration of hentai.
+   */
+  duration?: string;
 }
 
 export interface HentaiMetadata {
@@ -91,42 +101,42 @@ export interface EpisodeMetadata {
   /**
    * Image thumbnail URL.
    */
-  img?: string;
+  img: string;
 
   /**
    * Title of hentai.
    */
-  title?: string;
+  title: string;
 
   /**
    * Synopsis of hentai.
    */
-  synopsis?: string;
+  synopsis: string;
 
   /**
    * Genre of hentai.
    */
-  genre?: string;
+  genre: string;
 
   /**
    * Producer of hentai.
    */
-  producer?: string;
+  producer: string;
 
   /**
    * Duration of hentai.
    */
-  duration?: string;
+  duration: string;
 
   /**
-   * Array of available resolution to download.
+   * Size of each quality.
    */
-  quality?: string[];
+  size: Record<string, string>;
 
   /**
-   * Array of download URLs.
+   * Object of download links.
    */
-  download?: string[];
+  download: Record<string, string[]>;
 }
 
 export interface TextIndex {

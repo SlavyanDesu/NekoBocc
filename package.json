@@ -38,7 +38,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --ignore-path .gitignore --config .prettierrc --write \"**/*.ts\"",
     "prepublishOnly": "npm run lint:fix && npm run format && npm run build",
-    "test": "ts-node-esm src/index.ts"
+    "test": "ts-node src/index.ts"
   },
   "author": "SlavyanDesu",
   "license": "MIT",
