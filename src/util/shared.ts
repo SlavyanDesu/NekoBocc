@@ -1,5 +1,6 @@
-export const baseUrl = 'https://nekopoi.care';
-export const valid = (url: string) => url.match(new RegExp(/^(?:https?:\/\/)?(?:[^.]+\.)?nekopoi\.care(\/.*)?$/gm));
+export const baseUrl = "https://nekopoi.care";
+export const valid = (url: string) =>
+  url.match(new RegExp(/^(?:https?:\/\/)?(?:[^.]+\.)?nekopoi\.care(\/.*)?$/gm));
 /*
 export const header = {
   headers: {
@@ -9,7 +10,7 @@ export const header = {
 };
 */
 export const endpoints = {
-  latest: '/category/hentai/page/__PAGE',
-  search: '/search/__QUERY',
-  random: '/random'
+  latest: "/category/hentai/page/__PAGE",
+  search: "/search/__QUERY",
+  random: "/random",
 };

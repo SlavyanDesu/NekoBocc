@@ -1,6 +1,6 @@
 {
   "name": "nekobocc",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A simple and lightweight Nekopoi scraper.",
   "type": "commonjs",
   "main": "./dist/cjs/index.js",
@@ -52,12 +52,11 @@
     "url": "git+https://github.com/SlavyanDesu/NekoBocc.git"
   },
   "devDependencies": {
+    "globals": "^16.0.0",
+    "@eslint/js": "^9.21.0",
+    "typescript-eslint": "^8.26.0",
     "@types/cheerio": "^0.22.31",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
     "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.1",
     "ts-node": "^10.9.1",

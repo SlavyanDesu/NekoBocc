@@ -1,7 +1,7 @@
-import axios from 'axios';
-import type { EpisodeMetadata, HentaiMetadata } from '../util/interfaces';
-import { baseUrl, endpoints } from '../util/shared';
-import { get } from './Get';
+import axios from "axios";
+import type { EpisodeMetadata, HentaiMetadata } from "../util/interfaces";
+import { baseUrl, endpoints } from "../util/shared";
+import { get } from "./Get";
 
 /**
  * Get random hentai or episode page.
