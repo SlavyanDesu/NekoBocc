@@ -17,7 +17,7 @@ export interface HentaiRelease {
   /**
    * Genre of post.
    */
-  genre: string | null;
+  genre: string[];
 
   /**
    * Duration of hentai.

@@ -58,8 +58,4 @@ export default class NekoBocc {
 const nekobocc = new NekoBocc();
 
 // Get list of released hentai.
-nekobocc
-  .get(
-    "https://nekopoi.care/uncensored-1-punkan-dake-irete-mo-iiyo-share-house-no-himitsu-rule-episode-4-subtitle-indonesia/"
-  )
-  .then((res) => console.log(res));
+nekobocc.search("shoujo ramune").then((res) => console.log(res));

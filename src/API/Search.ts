@@ -4,10 +4,10 @@ import type { HentaiRelease } from "../util/interface";
 import { axiosConfig, baseUrl, endpoints } from "../util/shared";
 
 /**
- * Get search result.
+ * Get search results.
  *
  * @param {string} query - A search query.
- * @returns {Promise<HentaiRelease[]>} Array object of search result.
+ * @returns {Promise<HentaiRelease[]>} Array of search results.
  */
 export const search = async (query: string): Promise<HentaiRelease[]> => {
   const res = await axios.get(
@@ -18,23 +18,31 @@ export const search = async (query: string): Promise<HentaiRelease[]> => {
   const array: HentaiRelease[] = [];
 
   $("div.result div.top").each((_i, e) => {
-    const img = $(e).find("div.limitnjg > img").attr("src") || "";
+    const img = $(e).find("div.limitnjg > img").attr("src") ?? "";
+
     const title = $(e).find("h2 > a").text().trim();
-    const url = new URL($(e).find("h2 > a").attr("href") || "", baseUrl).href;
 
-    const genre = $(e)
-      .find("p")
-      .filter((_i, el) => $(el).text().includes("Genre"))
-      .text()
-      .replace("Genre :", "")
-      .trim();
+    const href = $(e).find("h2 > a").attr("href");
+    const url = href ? new URL(href, baseUrl).href : "";
 
-    const duration = $(e)
-      .find("p")
-      .filter((_i, el) => $(el).text().includes("Duration"))
-      .text()
-      .replace("Duration :", "")
-      .trim();
+    const genre =
+      $(e)
+        .find("p")
+        .filter((_i, el) => $(el).text().includes("Genre"))
+        .first()
+        .text()
+        .replace("Genre :", "")
+        .trim()
+        .split(/\s*,\s*/) || null;
+
+    const duration =
+      $(e)
+        .find("p")
+        .filter((_i, el) => $(el).text().includes("Duration"))
+        .first()
+        .text()
+        .replace("Duration :", "")
+        .trim() || null;
 
     array.push({
       img,
@@ -44,6 +52,5 @@ export const search = async (query: string): Promise<HentaiRelease[]> => {
       duration,
     });
   });
-
   return array;
 };

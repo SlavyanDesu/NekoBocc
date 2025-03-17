@@ -32,7 +32,8 @@ export const release = async (page = 1): Promise<HentaiRelease[]> => {
         .first()
         .text()
         .replace("Genre :", "")
-        .trim() || null;
+        .trim()
+        .split(/\s*,\s*/) || null;
 
     const duration =
       $(e)
