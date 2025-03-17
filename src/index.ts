@@ -3,7 +3,7 @@ import type {
   EpisodeMetadata,
   HentaiMetadata,
   HentaiRelease,
-} from "./util/interfaces";
+} from "./util/interface";
 import { valid } from "./util/shared";
 
 export default class NekoBocc {
@@ -59,5 +59,7 @@ const nekobocc = new NekoBocc();
 
 // Get list of released hentai.
 nekobocc
-  .get("https://nekopoi.care/shoujo-ramune-episode-4-subtitle-indonesia/")
+  .get(
+    "https://nekopoi.care/uncensored-1-punkan-dake-irete-mo-iiyo-share-house-no-himitsu-rule-episode-4-subtitle-indonesia/"
+  )
   .then((res) => console.log(res));

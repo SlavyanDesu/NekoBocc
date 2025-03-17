@@ -2,99 +2,99 @@ export interface HentaiRelease {
   /**
    * Thumbnail URL of post.
    */
-  img?: string;
+  img: string;
 
   /**
    * Title of post.
    */
-  title?: string;
+  title: string;
 
   /**
    * URL of post.
    */
-  url?: string;
+  url: string;
 
   /**
    * Genre of post.
    */
-  genre?: string;
+  genre: string | null;
 
   /**
    * Duration of hentai.
    */
-  duration?: string;
+  duration: string | null;
 }
 
 export interface HentaiMetadata {
   /**
    * Image thumbnail URL.
    */
-  img?: string;
+  img: string;
 
   /**
    * Title of hentai.
    */
-  title?: string;
+  title: string;
 
   /**
    * Synopsis of hentai.
    */
-  synopsis?: string;
+  synopsis: string;
 
   /**
    * Total views of hentai.
    */
-  views?: number;
+  views: number;
 
   /**
    * Japanese title of hentai.
    */
-  japanese?: string;
+  japanese: string;
 
   /**
    * Category page.
    */
-  category?: string;
+  category: string;
 
   /**
    * Total episode of hentai.
    */
-  episode?: number;
+  episode: number;
 
   /**
    * Status of hentai.
    */
-  status?: string;
+  status: string;
 
   /**
    * Date aired of hentai.
    */
-  aired?: string;
+  aired: string;
 
   /**
    * Producer of hentai.
    */
-  producer?: string;
+  producer: string;
 
   /**
    * Genre of hentai.
    */
-  genre?: string;
+  genre: string[];
 
   /**
    * Duration of hentai.
    */
-  duration?: string;
+  duration: string;
 
   /**
    * Score of hentai.
    */
-  score?: number;
+  score: number;
 
   /**
    * URL of episode(s).
    */
-  url?: string[];
+  url: string[];
 }
 
 export interface EpisodeMetadata {
@@ -116,12 +116,12 @@ export interface EpisodeMetadata {
   /**
    * Genre of hentai.
    */
-  genre: string;
+  genre: string[];
 
   /**
    * Producer of hentai.
    */
-  producer: string;
+  producer: string[];
 
   /**
    * Duration of hentai.
@@ -137,11 +137,4 @@ export interface EpisodeMetadata {
    * Object of download links.
    */
   download: Record<string, string[]>;
-}
-
-export interface TextIndex {
-  /**
-   * A string of each `<p>` elements.
-   */
-  text: string;
 }

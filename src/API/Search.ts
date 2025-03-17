@@ -1,7 +1,7 @@
 import axios from "axios";
 import { load } from "cheerio";
-import type { HentaiRelease } from "../util/interfaces";
-import { baseUrl, endpoints } from "../util/shared";
+import type { HentaiRelease } from "../util/interface";
+import { axiosConfig, baseUrl, endpoints } from "../util/shared";
 
 /**
  * Get search result.
@@ -11,7 +11,8 @@ import { baseUrl, endpoints } from "../util/shared";
  */
 export const search = async (query: string): Promise<HentaiRelease[]> => {
   const res = await axios.get(
-    baseUrl + endpoints.search.replace("__QUERY", encodeURIComponent(query))
+    baseUrl + endpoints.search.replace("__QUERY", encodeURIComponent(query)),
+    axiosConfig
   );
   const $ = load(res.data);
   const array: HentaiRelease[] = [];
@@ -43,5 +44,6 @@ export const search = async (query: string): Promise<HentaiRelease[]> => {
       duration,
     });
   });
+
   return array;
 };
