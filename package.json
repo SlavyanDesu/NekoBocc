@@ -58,7 +58,7 @@
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.3",
+    "prettier": "^3.5.3",
     "rimraf": "^4.1.1",
     "ts-node": "^10.9.1",
     "tsconfig-to-dual-package": "^1.1.0",
