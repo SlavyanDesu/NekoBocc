@@ -11,11 +11,17 @@ export const axiosConfig: AxiosRequestConfig = {
   },
 };
 
-export const valid = (url: string) =>
-  url.match(new RegExp(/^(?:https?:\/\/)?(?:[^.]+\.)?nekopoi\.care(\/.*)?$/gm));
-
 export const endpoints = {
   latest: "/category/hentai/page/__PAGE",
   search: "/search/__QUERY",
   random: "/random",
 };
+
+/**
+ * Check if URL match with NekoPoi's URL.
+ * 
+ * @param {string} url - URL to check. 
+ * @returns {boolean}
+ */
+export const valid = (url: string): boolean =>
+  new RegExp(/^(?:https?:\/\/)?(?:[^.]+\.)?nekopoi\.care(\/.*)?$/gm).test(url);
