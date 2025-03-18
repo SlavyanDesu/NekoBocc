@@ -1,6 +1,6 @@
-import { get, random, release, search } from "./scraper/index";
-import type { EpisodeMetadata, HentaiMetadata, HentaiRelease } from "./types/interfaces";
-import { valid } from "./utils/config";
+import { get, random, release, search } from "./scraper/index.js";
+import type { EpisodeMetadata, HentaiMetadata, HentaiRelease } from "./types/interfaces.js";
+import { valid } from "./utils/config.js";
 
 export default class NekoBocc {
   /**

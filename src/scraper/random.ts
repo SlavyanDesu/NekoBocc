@@ -1,7 +1,7 @@
 import axios from "axios";
-import type { EpisodeMetadata, HentaiMetadata } from "../types/interfaces";
-import { axiosConfig, baseUrl, endpoints } from "../utils/config";
-import { get } from "./get";
+import type { EpisodeMetadata, HentaiMetadata } from "../types/interfaces.js";
+import { axiosConfig, baseUrl, endpoints } from "../utils/config.js";
+import { get } from "./get.js";
 
 /**
  * Get a random hentai episode or page.

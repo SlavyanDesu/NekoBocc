@@ -1,4 +1,5 @@
-export * from "./get";
-export * from "./random";
-export * from "./release";
-export * from "./search";
+export * from "./get.js";
+export * from "./random.js";
+export * from "./release.js";
+export * from "./search.js";
+

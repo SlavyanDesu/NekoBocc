@@ -1,7 +1,7 @@
 import axios from "axios";
 import { load } from "cheerio";
-import type { HentaiRelease } from "../types/interfaces";
-import { axiosConfig, baseUrl, endpoints } from "../utils/config";
+import type { HentaiRelease } from "../types/interfaces.js";
+import { axiosConfig, baseUrl, endpoints } from "../utils/config.js";
 
 /**
  * Get a list of released hentai.
