@@ -50,7 +50,3 @@ export default class NekoBocc {
     return random();
   }
 }
-
-const neko = new NekoBocc()
-neko.get("https://nekopoi.care/hentai/akane-wa-tsumare-somerareru/")
-  .then((res) => console.log(res))
