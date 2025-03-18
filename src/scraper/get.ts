@@ -9,16 +9,12 @@ import { axiosConfig } from "../utils/config";
  * @param {string} url - Hentai episode or page URL.
  * @returns {Promise<HentaiMetadata | EpisodeMetadata>} Object of hentai episode or page metadata.
  */
-export const get = async (
-  url: string
-): Promise<HentaiMetadata | EpisodeMetadata> => {
+export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata> => {
   const res = await axios.get(url, axiosConfig);
   const $ = load(res.data);
 
   if (url.includes("/hentai/")) {
-    const url = $("div.episodelist > ul > li a")
-      .map((_i, e) => $(e).attr("href"))
-      .get();
+    const url = $("div.episodelist > ul > li a").map((_i, e) => $(e).attr("href")).get();
     const episode = $("div.episodelist > ul > li").length;
     const list = $("div.listinfo li");
 
