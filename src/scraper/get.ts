@@ -91,6 +91,7 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
       ),
       url: url,
     };
+
     return result;
   } else {
     const konten = $("div.konten p");
