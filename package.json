@@ -1,6 +1,6 @@
 {
   "name": "nekobocc",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "A simple and lightweight NekoPoi scraper.",
   "main": "./dist/cjs/index.js",
   "type": "module",
@@ -43,7 +43,6 @@
   "license": "MIT",
   "homepage": "https://github.com/SlavyanDesu/NekoBocc#readme",
   "dependencies": {
-    "axios": "^1.2.2",
     "cheerio": "^1.0.0-rc.12"
   },
   "repository": {
