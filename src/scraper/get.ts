@@ -153,7 +153,6 @@ export const get = async (url: string): Promise<HentaiMetadata | EpisodeMetadata
 				sizeText.split('|').forEach((part) => {
 					const match = part.trim().match(/(\d+P)\s*:\s*(\d+mb)/i);
 					if (match) {
-						// eslint-disable-next-line @typescript-eslint/no-unused-vars
 						const [_, resolution, size] = match;
 						result.size[resolution] = size.toUpperCase();
 					}
